@@ -66,12 +66,12 @@ body {
     border-radius: 5px;
 }
 
-.front  { transform: translateZ(100px); background-image: url(images/faces/one.svg); }
-.back   { transform: rotateY(180deg) translateZ(100px); background-image: url(images/faces/six.svg); }
-.left   { transform: rotateY(-90deg) translateZ(100px); background-image: url(images/faces/two.svg); }
-.right  { transform: rotateY(90deg) translateZ(100px); background-image: url(images/faces/five.svg); }
-.top    { transform: rotateX(90deg) translateZ(100px); background-image: url(images/faces/three.svg); }
-.bottom { transform: rotateX(-90deg) translateZ(100px); background-image: url(images/faces/four.svg); }
+.front  { transform: translateZ(100px); background-image: url(../images/faces/one.svg); }
+.back   { transform: rotateY(180deg) translateZ(100px); background-image: url(../images/faces/six.svg); }
+.left   { transform: rotateY(-90deg) translateZ(100px); background-image: url(../images/faces/two.svg); }
+.right  { transform: rotateY(90deg) translateZ(100px); background-image: url(../images/faces/five.svg); }
+.top    { transform: rotateX(90deg) translateZ(100px); background-image: url(../images/faces/three.svg); }
+.bottom { transform: rotateX(-90deg) translateZ(100px); background-image: url(../images/faces/four.svg); }
 
 .synth-container {
     position: absolute;
