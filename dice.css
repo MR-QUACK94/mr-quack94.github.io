@@ -93,8 +93,7 @@ body {
     background-color: var(--bar-color);
 }
 
-/* Gradient colors from pastel blue to pastel orange */
-.synth-container .synth-bar:nth-child(1) { --bar-color: #ADE8F4; }  /* Pastel Blue */
+.synth-container .synth-bar:nth-child(1) { --bar-color: #ADE8F4; }
 .synth-container .synth-bar:nth-child(2) { --bar-color: #B5E4F4; }
 .synth-container .synth-bar:nth-child(3) { --bar-color: #BDE0F3; }
 .synth-container .synth-bar:nth-child(4) { --bar-color: #C4DCF2; }
@@ -109,4 +108,4 @@ body {
 .synth-container .synth-bar:nth-child(13) { --bar-color: #FFB8E5; }
 .synth-container .synth-bar:nth-child(14) { --bar-color: #FFB4E0; }
 .synth-container .synth-bar:nth-child(15) { --bar-color: #FFB0DB; }
-.synth-container .synth-bar:nth-child(16) { --bar-color: #FFACD6; }  /* Pastel Pink */
+.synth-container .synth-bar:nth-child(16) { --bar-color: #FFACD6; }

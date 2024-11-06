@@ -102,18 +102,18 @@ document.addEventListener("DOMContentLoaded", function() {
             audio.play();
             audio.volume = 0.4;
             musicPlaying = true;
-            animateBars(); // Start animating bars only after music plays
+            animateBars();
         }
     });
 
     function animateBars() {
-        if (!musicPlaying) return; // Stop animating if music is not playing
+        if (!musicPlaying) return;
 
         bars.forEach(bar => {
-            const randomHeight = Math.random() * 20; // Random height between 0 and 100%
+            const randomHeight = Math.random() * 20;
             bar.style.height = randomHeight + '%';
         });
 
-        setTimeout(animateBars, 200); // Change bar heights every 500ms
+        setTimeout(animateBars, 200);
     }
 });
