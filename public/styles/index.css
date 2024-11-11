@@ -1,0 +1,258 @@
+.cabinet-container {
+    perspective: 1000px;
+    width: 200px;
+    height: 200px;
+    margin: 100px auto;
+}
+
+.cabinet {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(-30deg) rotateY(-45deg);
+}
+
+.cabinet div {
+    position: absolute;
+    width: 200px;
+    height: 500px;
+    background-color: rgb(128, 128, 128);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.cabinet .top {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(170, 170, 170);
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.cabinet .back {
+    transform: rotateY(180deg) translateZ(100px);
+}
+
+.cabinet .right {
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+.cabinet .left {
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+.cabinet .bottom {
+    transform: rotateX(90deg) translateZ(-400px);
+    background-color: rgb(100, 100, 100);
+    width: 200px;
+    height: 200px;
+}
+
+.cabinet .drawer {
+    position: absolute;
+    width: 200px;
+    height: 167px;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+}
+
+.cabinet .drawer.upper {
+    transform: translateZ(100px);
+}
+
+.cabinet .drawer.middle {
+    transform: translateY(167px) translateZ(100px);
+}
+
+.cabinet .drawer.lower {
+    transform: translateY(333px) translateZ(100px);
+}
+
+.cabinet .drawer:hover {
+    transform: translateZ(200px);
+    cursor: pointer;
+}
+
+.cabinet .drawer.middle:hover {
+    transform: translateZ(200px) translateY(167px);
+}
+
+.cabinet .drawer.lower:hover {
+    transform: translateZ(200px) translateY(333px);
+}
+
+.cabinet .drawer .front {
+    position: absolute;
+    width: 200px;
+    height: 167px;
+    background-color: rgba(150, 150, 150);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.cabinet .drawer .side {
+    position: absolute;
+    width: 200px;  /* Keep original width */
+    height: 167px;
+    background-color: rgb(128, 128, 128);
+    transition: transform 0.3s ease, width 0.3s ease, left 0.3s ease, right 0.3s ease; /* Add transition for smooth effect */
+}
+
+.cabinet .drawer .side.left {
+    left: -100px;
+    transform: rotateY(90deg) translateX(100px);
+}
+
+.cabinet .drawer .side.right {
+    right: -100px;
+    transform: rotateY(-90deg) translateX(-100px);
+}
+
+.cabinet .drawer .side.bottom {
+    transform: rotateX(90deg) translateY(-100px) translateZ(-83.5px);
+}
+
+.cabinet .drawer:hover .side.left {
+    width: 300px;
+    left: -150px;
+    transform: rotateY(90deg) translateX(150px);  /* Increase translateX to 200px */
+}
+
+.cabinet .drawer:hover .side.right {
+    width: 300px;
+    right: -150px;
+    transform: rotateY(-90deg) translateX(-150px);  /* Increase translateX to -200px */
+}
+
+.drawer .file {
+    position: absolute;
+    width: 199px;
+    height: 157px;
+    color: black;
+    background-color: coral;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: transform 0.3s ease;
+    border-radius: 4px; /* Optional: add rounded corners */ /* Ensures the tab blends seamlessly */
+}
+
+/* File tab styling */
+.drawer .file-tab {
+    width: 15px;
+    height: 10px;
+    background-color: purple;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    text-align: center;
+    padding-top: 2px;
+    font-size: 14px;
+    color: black;
+    position: absolute;
+    top: -12.5px;
+}
+
+.drawer .file1 .file-tab { background-color: red; left: 0px; }
+.drawer .file2 .file-tab { background-color: orange;  left: 23.125px; }
+.drawer .file3 .file-tab { background-color: yellow;  left: 46.25px; }
+.drawer .file4 .file-tab { background-color: green;  left: 69.375px; }
+.drawer .file5 .file-tab { background-color: blue;  left: 92.5px; }
+.drawer .file6 .file-tab { background-color: indigo;  left: 115.625px; }
+.drawer .file7 .file-tab { background-color: violet;  left: 138.75px; }
+.drawer .file8 .file-tab { background-color: purple;  left: 161.875px; }
+.drawer .file9 .file-tab { background-color: pink;  left: 184px; }
+
+.drawer .file1 { transform: translateZ(-10px) translateY(7.5px); }
+.drawer .file1:hover { transform: translateZ(-10px) translateY(-25px); }
+
+.drawer .file2 { transform: translateZ(-20px) translateY(7.5px); }
+.drawer .file2:hover { transform: translateZ(-20px) translateY(-25px); }
+
+.drawer .file3 { transform: translateZ(-30px) translateY(7.5px); }
+.drawer .file3:hover { transform: translateZ(-30px) translateY(-25px); }
+
+.drawer .file4 { transform: translateZ(-40px) translateY(7.5px); }
+.drawer .file4:hover { transform: translateZ(-40px) translateY(-25px); }
+
+.drawer .file5 { transform: translateZ(-50px) translateY(7.5px); }
+.drawer .file5:hover { transform: translateZ(-50px) translateY(-25px); }
+
+.drawer .file6 { transform: translateZ(-60px) translateY(7.5px); }
+.drawer .file6:hover { transform: translateZ(-60px) translateY(-25px); }
+
+.drawer .file7 { transform: translateZ(-70px) translateY(7.5px); }
+.drawer .file7:hover { transform: translateZ(-70px) translateY(-25px); }
+
+.drawer .file8 { transform: translateZ(-80px) translateY(7.5px); }
+.drawer .file8:hover { transform: translateZ(-80px) translateY(-25px); }
+
+.drawer .file9 { transform: translateZ(-90px) translateY(7.5px); }
+.drawer .file9:hover { transform: translateZ(-90px) translateY(-25px); }
+
+.drawer .front {
+    font-size: 1.5em !important;
+}
+
+h3 {
+    padding: 0px;
+    text-align: center;
+}
+
+ol {
+    padding-left: 20px;
+}
+
+/* Add this at the end of your index.css file */
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.cabinet-container {
+    margin-bottom: 300px; /* Add some space between cabinet and list */
+}
+
+.list-container {
+    text-align: center;
+    background-color: gray;
+    border-radius: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+    display: flex;
+    columns: 3;
+}
+
+.list-container div {
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+.list-container h3 {
+    margin-bottom: 10px;
+}
+
+.list-container a {
+    text-align: center;
+    display: block;
+}
+
+.help-text {
+    padding-bottom: 200px;
+    color: grey;
+}
